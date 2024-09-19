@@ -1,4 +1,4 @@
-package org.preliquibase.preliquibase;
+package org.preliquibase;
 
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.AutoConfigureOrder;

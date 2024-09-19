@@ -1,4 +1,4 @@
-package org.preliquibase.preliquibase;
+package org.preliquibase;
 
 import io.micrometer.common.util.StringUtils;
 import org.slf4j.Logger;
