@@ -18,4 +18,5 @@ public class PreLiquibaseAutoConfiguration {
     PreLiquibase getPreLiquibaseConfig() {
         return new PreLiquibase();
     }
+
 }
