@@ -16,15 +16,11 @@ jobs:
       with:
         java-version: '17'
         distribution: 'adopt'
-    - name: Login to GitHub Container Registry
-      run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-    - name: Build a container image from our Spring Boot app using Paketo.io / Cloud Native Build Packs
-      run: ./gradlew bootBuildImage --imageName=$IMAGE_NAME
-    - name: Tag & publish to GitHub Container Registry
-      run: |
-        IMAGE_ID=ghcr.io/${{ github.repository_owner }}/$IMAGE_NAME
-        VERSION=latest
-        docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
-        docker push $IMAGE_ID:$VERSION
+        server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
+        settings-path: ${{ github.workspace }} # location for the settings.xml file
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
+    - name: Publish to GitHub Packages Apache Maven
+      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
