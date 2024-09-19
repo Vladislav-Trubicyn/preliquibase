@@ -13,14 +13,6 @@
 	<artifactId>preliquibase</artifactId>
 	<version>1.0.0</version>
 
-	<distributionManagement>
-		<repository>
-			<id>github</id>
-			<name>GitHub Vladislav-Trubicyn Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/Vladislav-Trubicyn/preliquibase</url>
-		</repository>
-	</distributionManagement>
-
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -31,7 +23,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
-			<optional>true</optional>
 		</dependency>
 	</dependencies>
 </project>
