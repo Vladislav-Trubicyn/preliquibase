@@ -18,7 +18,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub Vladislav-Trubicyn Apache Maven Packages</name>
-			<url>https://github.com/Vladislav-Trubicyn/preliquibase</url>
+			<url>https://maven.pkg.github.com/Vladislav-Trubicyn/preliquibase</url>
 		</repository>
 	</distributionManagement>
 
