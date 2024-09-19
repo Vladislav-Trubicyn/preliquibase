@@ -14,6 +14,14 @@
 	<version>1.0.0</version>
 	<name>preliquibase</name>
 
+	<distributionManagement>
+		<repository>
+			<id>internal.repo</id>
+			<name>Internal repo</name>
+			<url>file:///home/thara/testesb/in</url>
+		</repository>
+	</distributionManagement>
+
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
