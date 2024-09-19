@@ -16,9 +16,9 @@
 
 	<distributionManagement>
 		<repository>
-			<id>internal.repo</id>
-			<name>Internal repo</name>
-			<url>file:///home/thara/testesb/in</url>
+			<id>github</id>
+			<name>GitHub Vladislav-Trubicyn Apache Maven Packages</name>
+			<url>https://github.com/Vladislav-Trubicyn/preliquibase</url>
 		</repository>
 	</distributionManagement>
 
