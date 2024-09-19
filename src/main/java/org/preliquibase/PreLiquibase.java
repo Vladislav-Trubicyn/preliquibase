@@ -3,7 +3,6 @@ package org.preliquibase;
 import io.micrometer.common.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.Configuration;
@@ -32,7 +31,7 @@ public class PreLiquibase implements BeanPostProcessor {
     private Logger log = LoggerFactory.getLogger(PreLiquibase.class);
 
     @Override
-    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+    public Object postProcessBeforeInitialization(Object bean, String beanName) {
         if (!isDone) {
             String[] splitJdbcUrl = jdbcUrl.split("/");
 
